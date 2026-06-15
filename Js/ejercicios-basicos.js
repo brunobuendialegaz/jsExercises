@@ -103,3 +103,188 @@ console.log(i)
 
 //Ejercicio 4
 
+/*
+const aldeanos = ["Fibrilio", "Narciso", "Vacarena", "Tendo", "Nendo"];
+
+console.log(aldeanos[3]);
+
+aldeanos.push("cervasio");
+
+console.log(aldeanos[5]);
+
+aldeanos[0] = "Bambina";
+
+console.log(aldeanos[0]);
+
+aldeanos.reverse();
+
+for (const aldeano of aldeanos) {
+    console.log(aldeano);
+};
+
+let indice = aldeanos.indexOf("Narciso");
+
+aldeanos.splice(indice, 1, "Canela");
+
+console.log(aldeanos);  
+
+console.log(aldeanos[aldeanos.length - 1])
+
+*/
+
+//Ejercicio 5
+
+/*
+
+const number1 = 10;
+const number2 = 20;
+const number3 = 2;
+
+// ejemplo
+if(number1 === 10){
+    console.log('number1 es estrictamente igual a 10')
+}
+
+if ((number2 / number1) == 2) {
+  console.log("number2 dividido entre number1 es igual a 2");
+}
+
+ 
+if (number1!==number2) {
+    console.log("number1 es estrictamente distinto a number2");
+}
+
+if (number3!=number1) {
+  console.log("number3 es distinto number1");
+}
+
+if (number3*5==number1) {
+    console.log("number3 por 5 es igual a number1");
+}
+
+if (number3*5==number1 && number1*2==number2) {
+    console.log("number3 por 5 es igual a number1 Y number1 por 2 es igual a number2");
+}
+
+if (number2/2==number1||number1/5==number3) {
+    console.log("number2 entre 2 es igual a number1 O number1 entre 5 es igual a number3");
+}
+ */
+
+//Ejercicio 6
+
+/* 
+for (let i = 0; i <= 9; i++) {
+    console.log(i);
+}
+
+
+for (let i = 0; i <= 9; i++) {
+    
+if (i % 2 == 0) {
+    console.log(i);
+}
+}
+
+for (let i = 0; i < 10; i++) {
+    if (i < 9) {
+        console.log("Intentando dormir 🐑");
+    } else {
+        console.log("¡Dormido!");
+}
+}
+
+*/
+
+//Ejercicio 7
+
+/* function greaterNumber(numberOne, numberTwo) {
+    let numeros = [numberOne, numberTwo];
+    numeros.sort((a, b) => a - b);
+    console.log(numeros[numeros.length - 1]);
+}
+
+const greaterNumber2 = (numberOne, numberTwo) => {
+    console.log(Math.max(numberOne, numberTwo));
+};
+
+greaterNumber(1924, 123333);
+greaterNumber2(109283, 3215312); */
+
+// ejercicio 8
+/* 
+const avengers = [
+    "Hulk",
+    "Thor",
+    "Iron Man",
+    "Captain A.",
+    "Spiderman",
+    "Captain M.",
+];
+
+function findLongestWord(stringList) {
+    let longest = " ";
+    for (const string of stringList) {
+        if (string.length > longest.length) {
+            longest = string;
+        }
+    }
+    console.log(longest);
+}
+
+findLongestWord(avengers); */
+
+//Ejercicio 9
+
+/* const numbers = [1, 2, 3, 5, 45, 37, 58];
+
+function sumNumbers(numberList) {
+    let total = 0;
+    for (const num of numberList) {
+        total += num;
+    }
+    return total;
+}
+
+console.log(sumNumbers(numbers)); */
+
+//Ejercicio 10
+/* 
+const numbers = [12, 21, 38, 5, 45, 37, 6];
+function average(numberList) {
+    let total = 0;
+    for (const num of numberList) {
+        total += num;
+    }
+    return total / numberList.length;
+}
+
+console.log(average(numbers));
+ */
+
+//Ejercicio 11
+
+const mixedElements = [
+    6,
+    1,
+    "Marvel",
+    1,
+    "hamburguesa",
+    "10",
+    "Prometeo",
+    8,
+    "Hola mundo",
+];
+function averageWord(list) {
+    let total = 0;
+    for (const element of list) {
+        if (typeof element === "number") {
+            total += element;
+        } else {
+            total += element.length;
+        }
+    }
+    return total / list.length;
+}
+
+console.log(averageWord(mixedElements));
