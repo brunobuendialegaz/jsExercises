@@ -81,7 +81,7 @@ console.log(nave2.precioFinal);
 
 //Ejercicio 3
 
-/* 
+/*
 
 console.log(10*5);
 console.log(10/2);
@@ -89,7 +89,7 @@ console.log(15%9);
 
 const p = 10;
 const j = 5;
-let o = p + j; 
+let o = p + j;
 
 console.log(o);
 
@@ -126,7 +126,7 @@ let indice = aldeanos.indexOf("Narciso");
 
 aldeanos.splice(indice, 1, "Canela");
 
-console.log(aldeanos);  
+console.log(aldeanos);
 
 console.log(aldeanos[aldeanos.length - 1])
 
@@ -149,7 +149,7 @@ if ((number2 / number1) == 2) {
   console.log("number2 dividido entre number1 es igual a 2");
 }
 
- 
+
 if (number1!==number2) {
     console.log("number1 es estrictamente distinto a number2");
 }
@@ -173,14 +173,14 @@ if (number2/2==number1||number1/5==number3) {
 
 //Ejercicio 6
 
-/* 
+/*
 for (let i = 0; i <= 9; i++) {
     console.log(i);
 }
 
 
 for (let i = 0; i <= 9; i++) {
-    
+
 if (i % 2 == 0) {
     console.log(i);
 }
@@ -212,7 +212,7 @@ greaterNumber(1924, 123333);
 greaterNumber2(109283, 3215312); */
 
 // ejercicio 8
-/* 
+/*
 const avengers = [
     "Hulk",
     "Thor",
@@ -249,7 +249,7 @@ function sumNumbers(numberList) {
 console.log(sumNumbers(numbers)); */
 
 //Ejercicio 10
-/* 
+/*
 const numbers = [12, 21, 38, 5, 45, 37, 6];
 function average(numberList) {
     let total = 0;
@@ -263,7 +263,7 @@ console.log(average(numbers));
  */
 
 //Ejercicio 11
-
+/* 
 const mixedElements = [
     6,
     1,
@@ -287,4 +287,100 @@ function averageWord(list) {
     return total / list.length;
 }
 
-console.log(averageWord(mixedElements));
+console.log(averageWord(mixedElements)); */
+
+//Ejercicio 12
+/* 
+const duplicates = [
+    'sushi',
+    'pizza',
+    'burger',
+    'potatoe',
+    'pasta',
+    'ice-cream',
+    'pizza',
+    'chicken',
+    'onion rings',
+    'pasta',
+    'soda'
+];
+
+function removeDuplicates(list) {
+    let newArray;
+    for (const element of list)
+        if (newArray === undefined) { newArray = [element]; }
+        else {
+            for (let i = 0; i < newArray.length; i++) {
+                if (element !== newArray[i] && i == newArray.length - 1) newArray.push(element);
+                else if (element === newArray[i]) break;
+                else continue;
+            }
+        }
+    return newArray;
+}
+
+
+console.log(duplicates);
+console.log(removeDuplicates(duplicates)); */
+
+//Ejercicio 13
+
+/* const names = [
+    'Peter',
+    'Steve',
+    'Tony',
+    'Natasha',
+    'Clint',
+    'Logan',
+    'Xabier',
+    'Bruce',
+    'Peggy',
+    'Jessica',
+    'Marc'
+];
+function nameFinder(nameList, searchName) {
+    for (let i = 0; i < nameList.length; i++) {
+        if (searchName === nameList[i]) return [true, i];
+    }
+    return false;
+}
+
+console.log(nameFinder(names, 'Tony'));
+console.log(nameFinder(names, ' sadfasdf')); */
+
+// Ejercicio 14
+
+const words = [
+    'code',
+    'repeat',
+    'eat',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code'
+];
+const existePalabra = (list, word) => {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].palabra === word) return [true, i];
+    }
+    return [false];
+};
+
+function repeatCounter(list) {
+    let palabras = [];
+    for (let i = 0; i < list.length; i++) {
+        const existe = existePalabra(palabras, list[i]);
+        if (existe[0]) {
+            palabras[existe[1]].repeticiones += 1;
+        } else {
+            palabras.push({ palabra: list[i], repeticiones: 1 });
+        }
+    }
+    return palabras;
+}
+
+console.log(repeatCounter(words));
