@@ -350,7 +350,7 @@ console.log(nameFinder(names, ' sadfasdf')); */
 
 // Ejercicio 14
 
-const words = [
+/* const words = [
     'code',
     'repeat',
     'eat',
@@ -384,3 +384,163 @@ function repeatCounter(list) {
 }
 
 console.log(repeatCounter(words));
+ */
+
+//Ejercicio 15
+
+/* const products = [
+    "Camiseta de Metallica",
+    "Pantalón vaquero",
+    "Gorra de beisbol",
+    "Camiseta de Basket",
+    "Cinturón de Orión",
+    "AC/DC Camiseta",
+];
+
+for (const element of products) {
+    if (element.includes("Camiseta")) console.log(element);
+} */
+
+//Ejercicio 16
+
+/* const placesToTravel = [
+    "Japon",
+    "Venecia",
+    "Murcia",
+    "Santander",
+    "Filipinas",
+    "Madagascar",
+];
+
+for (const element of placesToTravel) {
+    console.log(element);
+} */
+
+//Ejercicio 17
+
+/* const alien = {
+    name: 'Xenomorph',
+    species: 'Xenomorph XX121',
+    origin: 'Unknown',
+    weight: 180
+};
+
+for (const key in alien) {
+    console.log(`La propiedad ${key} tiene como valor: ${alien[key]}`);
+} */
+
+//Ejercicio 18
+
+/* const placesToTravel = [
+    { id: 5, name: "Japan" },
+    { id: 11, name: "Venecia" },
+    { id: 23, name: "Murcia" },
+    { id: 40, name: "Santander" },
+    { id: 44, name: "Filipinas" },
+    { id: 59, name: "Madagascar" },
+];
+
+for (let i = 0; i < placesToTravel.length; i++) {
+    if (placesToTravel[i].id === 11 || placesToTravel[i].id === 40) {
+        placesToTravel.splice(i, 1);
+    }
+}
+
+console.log(placesToTravel); */
+
+//Ejercicio 19
+
+/* const toys = [
+    { id: 5, name: 'Transformers' },
+    { id: 11, name: 'LEGO' },
+    { id: 23, name: 'Hot Wheels' },
+    { id: 40, name: 'Rascador de gato' },
+    { id: 40, name: 'FurReal Friends gato interactivo' },
+    { id: 60, name: 'Nerf Blaster' },
+    { id: 71, name: 'Sylvanian Families - Familia gato' }
+];
+
+let toysNoGato = [];
+for (const element of toys) {
+    if (!element.name.includes('gato')) {
+        toysNoGato.push(element);
+    }
+}
+
+console.log(toysNoGato); */
+
+//Ejercicio 20
+
+/* const popularToys = [];
+
+const toys = [
+    { id: 101, name: 'Super Soaker', sellCount: 15 },
+    { id: 102, name: 'Tamagotchi', sellCount: 22 },
+    { id: 103, name: 'Polly Pocket', sellCount: 8 },
+    { id: 104, name: 'Yo-yo', sellCount: 33 },
+    { id: 105, name: 'Pikachu plush toy', sellCount: 19 },
+    { id: 106, name: "Rubik's Cube", sellCount: 27 },
+    { id: 107, name: 'Fidget Spinner', sellCount: 12 },
+    { id: 108, name: 'Slinky', sellCount: 5 },
+    { id: 109, name: 'Magic 8-Ball', sellCount: 38 },
+    { id: 110, name: 'Troll Doll', sellCount: 20 }
+];
+
+for (const element of toys) {
+    if (element.sellCount > 15) {
+        popularToys.push(element);
+    }
+}
+
+console.log(popularToys); */
+
+//ejercicio 21
+
+/* const users = [
+    { name: "Tony", years: 43 },
+    { name: "Peter", years: 18 },
+    { name: "Natasha", years: 14 },
+    { name: "Bruce", years: 32 },
+    { name: "Khamala", years: 16 }
+];
+
+for (let i = 0; i < users.length; i++) {
+    if (i === 0) {
+        console.log("Usuarios menores de edad");
+    }
+    if (users[i].years < 18) {
+        console.log(users[i]);
+    }
+}
+
+for (let i = 0; i < users.length; i++) {
+    if (i === 0) {
+        console.log("Usuarios mayores de edad");
+    }
+    if (users[i].years >= 18) {
+        console.log(users[i]);
+    }
+} */
+
+//Ejercicio 22
+
+const fruits = ["Strawberry", "Banana", "Orange", "Apple"];
+
+const foodSchedule = [
+    { name: "Heura", isVegan: true },
+    { name: "Salmon", isVegan: false },
+    { name: "Tofu", isVegan: true },
+    { name: "Burger", isVegan: false },
+    { name: "Rice", isVegan: true },
+    { name: "Pasta", isVegan: true },
+];
+
+for (let i = 0; i < foodSchedule.length; i++) {
+    if (!foodSchedule[i].isVegan) {
+        foodSchedule.splice(i, 1);
+        foodSchedule.push({ name: fruits[0], isVegan: true });
+        fruits.splice(0, 1);
+    }
+}
+
+console.log(foodSchedule);
