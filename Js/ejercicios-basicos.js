@@ -524,23 +524,25 @@ for (let i = 0; i < users.length; i++) {
 
 //Ejercicio 22
 
-const fruits = ["Strawberry", "Banana", "Orange", "Apple"];
+/* const fruits = ["Strawberry", "Banana", "Orange", "Apple"];
 
 const foodSchedule = [
-    { name: "Heura", isVegan: true },
-    { name: "Salmon", isVegan: false },
-    { name: "Tofu", isVegan: true },
-    { name: "Burger", isVegan: false },
-    { name: "Rice", isVegan: true },
-    { name: "Pasta", isVegan: true },
+  { name: "Heura", isVegan: true },
+  { name: "Salmon", isVegan: false },
+  { name: "Tofu", isVegan: true },
+  { name: "Burger", isVegan: false },
+  { name: "Rice", isVegan: true },
+  { name: "Pasta", isVegan: true },
 ];
 
 for (let i = 0; i < foodSchedule.length; i++) {
-    if (!foodSchedule[i].isVegan) {
-        foodSchedule.splice(i, 1);
-        foodSchedule.push({ name: fruits[0], isVegan: true });
-        fruits.splice(0, 1);
-    }
+  if (!foodSchedule[i].isVegan) {
+    foodSchedule.splice(i, 1);
+    foodSchedule.push({ name: fruits[0], isVegan: true });
+    fruits.splice(0, 1);
+  }
 }
 
 console.log(foodSchedule);
+
+console.log(); */
