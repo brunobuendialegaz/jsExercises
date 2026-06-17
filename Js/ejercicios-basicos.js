@@ -546,3 +546,5 @@ for (let i = 0; i < foodSchedule.length; i++) {
 console.log(foodSchedule);
 
 console.log(); */
+
+//Ejercicio 23
