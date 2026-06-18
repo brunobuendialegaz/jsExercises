@@ -1018,6 +1018,43 @@ const volumenMedio = lista => {
 
 console.log(volumenMedio(users)); */
 
+/* const users = [
+    {
+        name: "Alberto",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 50 },
+            rain: { format: "ogg", volume: 60 },
+            firecamp: { format: "mp3", volume: 80 },
+        },
+    },
+    {
+        name: "Antonio",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 30 },
+            shower: { format: "ogg", volume: 55 },
+            train: { format: "mp3", volume: 60 },
+        },
+    },
+    {
+        name: "Santiago",
+        favoritesSounds: {
+            shower: { format: "mp3", volume: 50 },
+            train: { format: "ogg", volume: 60 },
+            firecamp: { format: "mp3", volume: 80 },
+        },
+    },
+    {
+        name: "Laura",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 67 },
+            wind: { format: "ogg", volume: 35 },
+            firecamp: { format: "mp3", volume: 60 },
+        },
+    },
+]; */
+
+//Ejercicio 39
+/* 
 const users = [
     {
         name: "Alberto",
@@ -1052,3 +1089,92 @@ const users = [
         },
     },
 ];
+
+const contadorFavoritos = list => {
+    const soundsCount = {};
+    for (const user of list) {
+        for (const key in user.favoritesSounds) {
+            if (!soundsCount[key]) {
+                soundsCount[key] = 1;
+            } else {
+                soundsCount[key] += 1;
+            }
+        }
+    }
+    return soundsCount;
+};
+
+console.log(contadorFavoritos(users)); */
+
+//Ejercicio 40
+/* 
+function findArrayIndex(array, text) {
+    if (!array.includes(text)) return -1;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === text) {
+            return i;
+        }
+    }
+}
+
+function removeltem(array, text) {
+    const arraySplice = [...array];
+    const index = findArrayIndex(array, text);
+    if (index === -1) return 'Palabra no encontrada';
+    else {
+        arraySplice.splice(index, 1);
+        return arraySplice;
+    }
+}
+
+const mainCharacters = [
+    "Luke",
+    "Leia",
+    "Han Solo",
+    "Chewbacca",
+    "Rey",
+    "Anakin",
+    "Obi-Wan",
+];
+
+console.log(mainCharacters);
+
+console.log(removeltem(mainCharacters, 'Leia'));
+console.log(removeltem(mainCharacters, 'wefsvcew'));
+
+console.log(mainCharacters); */
+
+//Ejercicio 41
+
+/* const rollDice = num => {
+    return Math.floor((Math.random() * num) + 1);
+};
+
+console.log(rollDice(10)); */
+
+//Ejercicio 42
+
+const fantasticFour = [
+    "La antorcha humana",
+    "Mr. Fantástico",
+    "La mujer invisible",
+    "La cosa",
+];
+
+// const swap = (array, indexA, indexB) => {
+//     const elementA = array[indexA];
+//     const elementB = array[indexB];
+//     const swapedArray = [...array];
+//     swapedArray[indexA] = elementB;
+//     swapedArray[indexB] = elementA;
+//     return swapedArray;
+// };
+
+const swap = (array, indexA, indexB) => {
+    const swapedArray = [...array];
+    [swapedArray[indexA], swapedArray[indexB]] = [swapedArray[indexB], swapedArray[indexA]];
+    return swapedArray;
+};
+
+console.log(swap(fantasticFour, 1, 3));
+console.log(fantasticFour);
