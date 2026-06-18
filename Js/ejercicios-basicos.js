@@ -806,3 +806,249 @@ const xMen = [
 const findOldestXMen = lista => lista.reduce((oldest, current) => current.year < oldest.year ? current : oldest);
 
 console.log(miembroAntiguoPro(xMen)); */
+
+//Ejercicio 33
+
+/* const capitals = {
+    Spain: 'Madrid',
+    France: 'Paris',
+    Italy: 'Rome',
+    Germany: 'Berlin',
+    Portugal: 'Lisbon',
+    Poland: 'Warsaw',
+    Greece: 'Athens',
+    Austria: 'Vienna',
+    Hungary: 'Budapest',
+    Ireland: 'Dublin'
+};
+
+function getCapital(country) {
+    if (!capitals[country]) {
+        return 'El pais no esta contemplado';
+    } else {
+        return capitals[country];
+    }
+}
+
+console.log(getCapital('Spain'));
+console.log(getCapital('Trinidad y tovago')); */
+
+//Ejercicio 34
+
+/* const movies = [
+    { title: 'Inception', duration: 148 },
+    { title: 'The Dark Knight', duration: 152 },
+    { title: 'Interstellar', duration: 169 },
+    { title: 'Dunkirk', duration: 106 },
+    { title: 'The Prestige', duration: 130 },
+    { title: 'Memento', duration: 113 },
+    { title: 'Batman Begins', duration: 140 },
+    { title: 'The Dark Knight Rises', duration: 164 },
+    { title: 'Tenet', duration: 150 },
+    { title: 'Insomnia', duration: 118 }
+];
+
+function averageMovieDuration(movies) {
+    let total = 0;
+    movies.forEach(element => {
+        total += element.duration;
+    });
+    return total / movies.length;
+}
+
+console.log(averageMovieDuration(movies)); */
+
+//Ejercicio 35
+
+/* const mutants = [
+    { name: 'Wolverine', power: 'regeneration' },
+    { name: 'Magneto', power: 'magnetism' },
+    { name: 'Professor X', power: 'telepathy' },
+    { name: 'Jean Grey', power: 'telekinesis' },
+    { name: 'Rogue', power: 'power absorption' },
+    { name: 'Storm', power: 'weather manipulation' },
+    { name: 'Mystique', power: 'shape-shifting' },
+    { name: 'Beast', power: 'superhuman strength' },
+    { name: 'Colossus', power: 'steel skin' },
+    { name: 'Nightcrawler', power: 'teleportation' }
+];
+
+function findMutantByPower(mutants, power) {
+    const encontrado = mutants.find(element => element.power === power);
+    return encontrado ? encontrado : 'No hay nadie con este poder';
+}
+
+console.log(findMutantByPower(mutants, 'telepathy'));
+console.log(findMutantByPower(mutants, 'sdfasdfadsf')); */
+
+//Ejercicio 36
+
+/* const actors = [
+    { name: 'Leonardo DiCaprio', born: 1974 },
+    { name: 'Tom Hanks', born: 1956 },
+    { name: 'Meryl Streep', born: 1949 },
+    { name: 'Brad Pitt', born: 1963 },
+    { name: 'Johnny Depp', born: 1963 },
+    { name: 'Scarlett Johansson', born: 1984 },
+    { name: 'Jennifer Lawrence', born: 1990 },
+    { name: 'Denzel Washington', born: 1954 },
+    { name: 'Morgan Freeman', born: 1937 },
+    { name: 'Cate Blanchett', born: 1969 }
+];
+
+function calculateActorsAges(actors) {
+    const actoresEdad = [];
+    for (const element of actors) {
+        actoresEdad.push({ name: element.name, age: 2026 - element.born });
+    }
+    return actoresEdad;
+}
+
+console.log(calculateActorsAges(actors)); */
+
+//Ejercicio 37
+/* 
+const movies = [
+    {
+        title: "Bracula: Condemor II",
+        duration: 192,
+        categories: ["comedia", "aventura"],
+    },
+    {
+        title: "Spider-Man: No Way Home",
+        duration: 122,
+        categories: ["aventura", "acción"],
+    },
+    {
+        title: "The Voices",
+        duration: 223,
+        categories: ["comedia", "thriller"],
+    },
+    {
+        title: "Shrek",
+        duration: 111,
+        categories: ["comedia", "aventura", "animación"],
+    },
+];
+
+// const resumenCategorias = lista => {
+//     const categorias = [];
+//     for (const movie of lista) {
+//         for (const category of movie.categories) {
+//             if (categorias.length === 0) {
+//                 categorias.push(category);
+//             }
+//             for (let i = 0; i < categorias.length; i++) {
+//                 if (category === categorias[i]) {
+//                     break;
+//                 }
+//                 else if (i === categorias.length - 1 && categorias[i] !== category) {
+//                     categorias.push(category);
+//                 }
+//             }
+//         }
+//     }
+//     return categorias;
+// };
+
+const resumenCategorias = lista => {
+    const categorias = [];
+    for (const movie of lista) {
+        for (const category of movie.categories) {
+            if (!categorias.includes(category)) {
+                categorias.push(category);
+            }
+        }
+    }
+    return categorias;
+};
+
+console.log(resumenCategorias(movies)); */
+
+//Ejercicio 38
+
+/* const users = [
+    {
+        name: "Alberto",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 50 },
+            rain: { format: "ogg", volume: 60 },
+            firecamp: { format: "mp3", volume: 80 },
+        },
+    },
+    {
+        name: "Antonio",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 30 },
+            shower: { format: "ogg", volume: 55 },
+            train: { format: "mp3", volume: 60 },
+        },
+    },
+    {
+        name: "Santiago",
+        favoritesSounds: {
+            shower: { format: "mp3", volume: 50 },
+            train: { format: "ogg", volume: 60 },
+            firecamp: { format: "mp3", volume: 80 },
+        },
+    },
+    {
+        name: "Laura",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 67 },
+            wind: { format: "ogg", volume: 35 },
+            firecamp: { format: "mp3", volume: 60 },
+        },
+    },
+];
+
+const volumenMedio = lista => {
+    const volumenes = [];
+    let total = 0;
+    for (const usuario of lista) {
+        for (const key in usuario.favoritesSounds) {
+            volumenes.push(usuario.favoritesSounds[key].volume);
+        }
+    }
+    for (const vol of volumenes) {
+        total += vol;
+    }
+    return total / volumenes.length;
+};
+
+console.log(volumenMedio(users)); */
+
+const users = [
+    {
+        name: "Alberto",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 50 },
+            rain: { format: "ogg", volume: 60 },
+            firecamp: { format: "mp3", volume: 80 },
+        },
+    },
+    {
+        name: "Antonio",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 30 },
+            shower: { format: "ogg", volume: 55 },
+            train: { format: "mp3", volume: 60 },
+        },
+    },
+    {
+        name: "Santiago",
+        favoritesSounds: {
+            shower: { format: "mp3", volume: 50 },
+            train: { format: "ogg", volume: 60 },
+            firecamp: { format: "mp3", volume: 80 },
+        },
+    },
+    {
+        name: "Laura",
+        favoritesSounds: {
+            waves: { format: "mp3", volume: 67 },
+            wind: { format: "ogg", volume: 35 },
+            firecamp: { format: "mp3", volume: 60 },
+        },
+    },
+];
