@@ -777,7 +777,7 @@ for (const element of artists) {
 } */
 
 //Ejercicio 32
-/* 
+/*
 const xMen = [
     { name: 'Wolverine', year: 1974 },
     { name: 'Cyclops', year: 1963 },
@@ -907,7 +907,7 @@ function calculateActorsAges(actors) {
 console.log(calculateActorsAges(actors)); */
 
 //Ejercicio 37
-/* 
+/*
 const movies = [
     {
         title: "Bracula: Condemor II",
@@ -1054,7 +1054,7 @@ console.log(volumenMedio(users)); */
 ]; */
 
 //Ejercicio 39
-/* 
+/*
 const users = [
     {
         name: "Alberto",
@@ -1107,7 +1107,7 @@ const contadorFavoritos = list => {
 console.log(contadorFavoritos(users)); */
 
 //Ejercicio 40
-/* 
+/*
 function findArrayIndex(array, text) {
     if (!array.includes(text)) return -1;
     for (let i = 0; i < array.length; i++) {
@@ -1154,12 +1154,12 @@ console.log(rollDice(10)); */
 
 //Ejercicio 42
 
-const fantasticFour = [
+/* const fantasticFour = [
     "La antorcha humana",
     "Mr. Fantástico",
     "La mujer invisible",
     "La cosa",
-];
+]; */
 
 // const swap = (array, indexA, indexB) => {
 //     const elementA = array[indexA];
@@ -1170,11 +1170,11 @@ const fantasticFour = [
 //     return swapedArray;
 // };
 
-const swap = (array, indexA, indexB) => {
+/* const swap = (array, indexA, indexB) => {
     const swapedArray = [...array];
     [swapedArray[indexA], swapedArray[indexB]] = [swapedArray[indexB], swapedArray[indexA]];
     return swapedArray;
 };
 
 console.log(swap(fantasticFour, 1, 3));
-console.log(fantasticFour);
+console.log(fantasticFour); */
